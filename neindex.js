@@ -1,6 +1,7 @@
 const quantity = prompt('Вкажіть кількість товарів');
 const price = prompt('Вкажіть ціну одиниці товару');
-
+const quantityNumber = Number(quantity);
+const priceNumber = Number(price);
 let total = Number(quantity) * Number(price);
 let originalTotal = total;
 
@@ -8,8 +9,8 @@ total -= total * 0.15;
 
 console.log(total);
 console.log(originalTotal);
-console.log(typeof quantity);
-console.log(typeof price);
+console.log(typeof quantityNumber);
+console.log(typeof priceNumber);
 console.log(Number.isNaN(total));
 
 const city = prompt('Введіть назву міста').trim();
@@ -20,9 +21,9 @@ console.log(city.toUpperCase());
 console.log(country.toLowerCase());
 console.log(city.length);
 console.log(country.length);
-console.log(city.includes('а'));
-console.log(city.indexOf('а'));      
-console.log(city.lastIndexOf('а'));
+console.log(city.includes('a'));
+console.log(city.indexOf('a'));      
+console.log(city.lastIndexOf('a'));
 console.log(message);
 
 const a = 28;
@@ -36,3 +37,5 @@ console.log(a + b);
 console.log(a - b);
 console.log(a * b);
 console.log(a / b);
+console.log(Math.max(a, b))
+console.log(Math.min(a, b))
