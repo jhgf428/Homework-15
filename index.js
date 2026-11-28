@@ -1,17 +1,24 @@
-// const name = "Олесій";
-// let age;
-// age = 21;
+const bill = prompt('Вкажіть сумму рахунку');
+const tipsPercent = prompt('Скільки бажаете залишити чайових');
 
-// console.log(name);
-// console.log(age);
-
-// const userAge = confirm("Вам виповнилося 18 років?");
-// const favoriteNumber = prompt("Яке ваше улюблене число?");
-
-// console.log(favoriteNumber);
-// console.log(userAge);
-
-// console.log(typeof name);           
-// console.log(typeof age);            
-// console.log(typeof userAge);        
-// console.log(typeof favoriteNumber);
+if (bill === null || tipsPercent === null) {
+  alert('Canceled.');
+} else {
+  const billNumber = Number(bill);
+  const tipNumber = Number(tipsPercent);
+  if (
+    Number.isNaN(billNumber) ||
+    Number.isNaN(tipNumber) ||
+    billNumber <= 0 ||
+    tipNumber < 0 ||
+    tipNumber > 100
+  ) {
+    alert('Invalid input data');
+  } else {
+    const tipAmount = (billNumber * tipNumber) / 100;
+    const totalSum = billNumber + tipAmount;
+    alert(
+      `Check sum: ${billNumber}\nTip: ${tipNumber}%\nTip amount: ${tipAmount}\nTotal sum to pay: ${totalSum}`
+    );
+  }
+}
